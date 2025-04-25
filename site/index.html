@@ -7,11 +7,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+        :root {
+      --bg-color: linear-gradient(135deg, #512888, #4C2C96, #4634A7, #3D3BBB, #3A41C6);
+      --text-color: #ffffff;
+      --link-color: #00d4ff;
+      --hover-color: #1e90ff;
+    }
+  
+    body.light-mode {
+      --bg-color: linear-gradient(135deg, #A879E0, #9B7DE8, #8D83F1, #7C8AF9, #7590FF);
+      --text-color: #111111;
+      --link-color: #0077cc;
+      --hover-color: #005fa3;
+    }
+  
     body {
       margin: 0;
       padding: 0;
       font-family: 'Times New Roman', serif;
-      background: linear-gradient(135deg, #512888, #4C2C96, #4634A7, #3D3BBB, #3A41C6);
+      background: var(--bg-color);
       color: #ffffff;
       line-height: 1.6;
     }
@@ -45,9 +59,23 @@
     .button:hover {
       background-color: #1e90ff;
     }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      background: var(--link-color);
+      color: #000;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
   <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Team working" style="width:100%; max-height:400px; object-fit:cover;">
   <div class="container">
     <section class="section" data-aos="fade-up">
@@ -67,7 +95,6 @@
       </ul>
     </section>
 
-    <img src="https://images.unsplash.com/photo-1612832021043-4aa2d01a9489" alt="Cloud service" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:2rem;">
     <section class="section" data-aos="fade-up" data-aos-delay="150">
       <h2>2. Firebase Setup</h2>
       <ul>
@@ -79,7 +106,6 @@
       </ul>
     </section>
 
-    <img src="https://images.unsplash.com/photo-1523475496153-3d6ccf71b292" alt="Code on screen" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:2rem;">
     <section class="section" data-aos="fade-up" data-aos-delay="200">
       <h2>3. Project Knowledge</h2>
       <ul>
@@ -135,7 +161,6 @@
       </ul>
     </section>
 
-    <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="Team meeting" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:2rem;">
     <section class="section" data-aos="fade-up" data-aos-delay="450">
       <h2>8. Team Meetings</h2>
       <ul>
@@ -149,5 +174,20 @@
   <script>
     AOS.init();
   </script>
+     <script>
+      function toggleTheme() {
+        const body = document.body;
+        const isLight = body.classList.toggle('light-mode');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      }
+  
+      // Load saved theme on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          document.body.classList.add('light-mode');
+        }
+      });
+    </script>
 </body>
 </html>
