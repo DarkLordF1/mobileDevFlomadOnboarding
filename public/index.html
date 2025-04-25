@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Dev Onboarding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #0e7387;
+    }
+    a {
+      color: #2c8394;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0a4b8c;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section {
+      margin-bottom: 4rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #00d4ff;
+      color: #000;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #1e90ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="section" data-aos="fade-up">
+      <h1>Welcome to Mobile Dev Onboarding</h1>
+      <p>Your journey starts here. Below is everything you need to get started building with Flutter and Firebase.</p>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="100">
+      <h2>1. Environment Setup</h2>
+      <ul>
+        <li><a href="https://docs.flutter.dev/get-started/install" target="_blank">Install Flutter SDK</a> and add it to your system PATH</li>
+        <li><a href="https://dart.dev/get-dart" target="_blank">Install Dart SDK</a> (if separate)</li>
+        <li>Set up <a href="https://developer.android.com/studio" target="_blank">Android Studio</a> or <a href="https://code.visualstudio.com/" target="_blank">VS Code</a></li>
+        <li>Clone the project repo and run <code>flutter pub get</code></li>
+        <li>Verify with a test run on emulator/device</li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="150">
+      <h2>2. Firebase Setup</h2>
+      <ul>
+        <li>Access the <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a></li>
+        <li>Download <code>google-services.json</code> and/or <code>GoogleService-Info.plist</code></li>
+        <li><a href="https://firebase.google.com/docs/cli" target="_blank">Install Firebase CLI</a>: <code>npm install -g firebase-tools</code></li>
+        <li>Run <code>firebase login</code> and <code>firebase init</code></li>
+        <li>Enable <a href="https://firebase.google.com/docs/auth" target="_blank">Auth</a>, <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a>, and <a href="https://firebase.google.com/docs/storage" target="_blank">Storage</a></li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="200">
+      <h2>3. Project Knowledge</h2>
+      <ul>
+        <li>Read the README and contribution guidelines</li>
+        <li>Understand folder structure and navigation</li>
+        <li>Learn state management used (Provider, Riverpod, BLoC)</li>
+        <li>Review how Firebase is integrated across features</li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="250">
+      <h2>4. Development Standards</h2>
+      <ul>
+        <li>Follow coding style and naming conventions</li>
+        <li>Use Git strategy (feature/bugfix branches)</li>
+        <li>Conventional commit messages</li>
+        <li>Understand PR and review process</li>
+        <li>Write tests per <a href="https://docs.flutter.dev/cookbook/testing" target="_blank">Flutter testing guide</a></li>
+        <li>Use <a href="https://pub.dev/packages/flutter_lints" target="_blank">Flutter lints</a></li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="300">
+      <h2>5. Tools & Accounts</h2>
+      <ul>
+        <li>Get access to GitHub/GitLab, Firebase, Slack/Discord, Jira/Trello</li>
+        <li>Access CI/CD dashboards (Codemagic, GitHub Actions)</li>
+        <li>Run <code>flutter format .</code> for code styling</li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="350">
+      <h2>6. Initial Tasks</h2>
+      <ul>
+        <li>Fix a small issue or implement a feature</li>
+        <li>Push code and create a PR</li>
+        <li>Pass all tests and deploy to staging</li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="400">
+      <h2>7. Optional (But Recommended)</h2>
+      <ul>
+        <li>Document a module or process</li>
+        <li>Help improve the README or setup guide</li>
+        <li>Join team syncs or watch recordings</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

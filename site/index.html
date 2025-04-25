@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Dev Onboarding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #512888, #4C2C96, #4634A7, #3D3BBB, #3A41C6);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #00d4ff;
+    }
+    a {
+      color: #00d4ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #1e90ff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section {
+      margin-bottom: 4rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #00d4ff;
+      color: #000;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #1e90ff;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Team working" style="width:100%; max-height:400px; object-fit:cover;">
+  <div class="container">
+    <section class="section" data-aos="fade-up">
+      <h1>Welcome to Mobile Dev Onboarding</h1>
+      <p>Your journey starts here. Below is everything you need to get started building with Flutter and Firebase.</p>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="100">
+      <h2>1. Environment Setup</h2>
+      <ul>
+        <li><a href="https://docs.flutter.dev/get-started/install" target="_blank">Install Flutter SDK</a> and add it to your system PATH</li>
+        <li><a href="https://dart.dev/get-dart" target="_blank">Install Dart SDK</a> (if separate)</li>
+        <li>Set up <a href="https://developer.android.com/studio" target="_blank">Android Studio</a> or <a href="https://code.visualstudio.com/" target="_blank">VS Code</a></li>
+        <li>Clone the project repo and run <code>flutter pub get</code></li>
+        <li>Verify with a test run on emulator/device</li>
+        <li>iOS 18.2 – Android 15.0 – macOSX 12.0</li>
+      </ul>
+    </section>
+
+    <img src="https://images.unsplash.com/photo-1612832021043-4aa2d01a9489" alt="Cloud service" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:2rem;">
+    <section class="section" data-aos="fade-up" data-aos-delay="150">
+      <h2>2. Firebase Setup</h2>
+      <ul>
+        <li><a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a></li>
+        <li>Download <code>google-services.json</code> and/or <code>GoogleService-Info.plist</code></li>
+        <li><a href="https://firebase.google.com/docs/cli" target="_blank">Install Firebase CLI</a>: <code>npm install -g firebase-tools</code></li>
+        <li>Run <code>firebase login</code> and <code>firebase init</code></li>
+        <li>Enable <a href="https://firebase.google.com/docs/auth" target="_blank">Authentication</a>, <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a>, and <a href="https://firebase.google.com/docs/storage" target="_blank">Storage</a></li>
+      </ul>
+    </section>
+
+    <img src="https://images.unsplash.com/photo-1523475496153-3d6ccf71b292" alt="Code on screen" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:2rem;">
+    <section class="section" data-aos="fade-up" data-aos-delay="200">
+      <h2>3. Project Knowledge</h2>
+      <ul>
+        <li>Read the <a href="https://github.com/your-org/project/blob/main/README.md" target="_blank">README</a> and contribution guidelines</li>
+        <li>Understand folder structure and navigation</li>
+        <li>Learn state management used (Provider, Riverpod, BLoC)</li>
+        <li>Review how Firebase is integrated across features</li>
+        <li>Watch this walkthrough video: <a href="https://youtu.be/your-onboarding-video" target="_blank">Project Overview</a></li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="250">
+      <h2>4. Development Standards</h2>
+      <ul>
+        <li>Follow <a href="https://github.com/your-org/project/wiki/Coding-Guidelines" target="_blank">coding style</a> and naming conventions</li>
+        <li>Use Git strategy (feature/bugfix branches)</li>
+        <li>Conventional commit messages <a href="https://www.conventionalcommits.org/" target="_blank">(guide)</a></li>
+        <li>Understand PR and review process</li>
+        <li>Write tests per <a href="https://docs.flutter.dev/cookbook/testing" target="_blank">Flutter testing guide</a></li>
+        <li>Use <a href="https://pub.dev/packages/flutter_lints" target="_blank">Flutter lints</a></li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="300">
+      <h2>5. Tools & Accounts</h2>
+      <ul>
+        <li>Request access to:<br>
+          <a href="https://github.com/your-org">GitHub</a>,
+          <a href="https://console.firebase.google.com/">Firebase Console</a>,
+          <a href="https://slack.com/">Slack</a>,
+          <a href="https://trello.com/">Trello</a>,
+          <a href="https://codemagic.io/">Codemagic</a>
+        </li>
+        <li>Run <code>flutter format .</code> for code styling</li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="350">
+      <h2>6. Initial Tasks</h2>
+      <ul>
+        <li>Fix a small issue or implement a feature</li>
+        <li>Push code and create a PR on <a href="https://github.com/your-org/project/pulls" target="_blank">GitHub</a></li>
+        <li>Pass all tests and deploy to staging</li>
+      </ul>
+    </section>
+
+    <section class="section" data-aos="fade-up" data-aos-delay="400">
+      <h2>7. Optional (But Recommended)</h2>
+      <ul>
+        <li>Document a module or process</li>
+        <li>Help improve the README or setup guide</li>
+        <li>Watch team syncs or recorded sessions <a href="https://drive.google.com/drive/folder/your-team-videos" target="_blank">here</a></li>
+      </ul>
+    </section>
+
+    <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="Team meeting" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:2rem;">
+    <section class="section" data-aos="fade-up" data-aos-delay="450">
+      <h2>8. Team Meetings</h2>
+      <ul>
+        <li>Sunday @ 2pm EST (Zoom link: <a href="https://zoom.us/your-meeting-link" target="_blank">Join</a>)</li>
+        <li>Wednesday @ 2pm EST</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
