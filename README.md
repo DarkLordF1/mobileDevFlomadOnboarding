@@ -1,7 +1,5 @@
 # Mobile Dev Onboarding 🚀
 
-![MIT License](https://img.shields.io/badge/license-MIT-green.svg) ![AOS.js](https://img.shields.io/badge/AOS-2.3.1-blue.svg)
-
 A lightweight, scroll‑driven checklist to help new mobile developers get comfortable with Flomad Labs’ Flutter & Firebase setup.
 
 ---
