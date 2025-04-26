@@ -8,37 +8,64 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
         :root {
-      --bg-color: linear-gradient(135deg, #512888, #4C2C96, #4634A7, #3D3BBB, #3A41C6);
-      --text-color: #ffffff;
-      --link-color: #00d4ff;
-      --hover-color: #1e90ff;
-    }
-  
-    body.light-mode {
-      --bg-color: linear-gradient(135deg, #A879E0, #9B7DE8, #8D83F1, #7C8AF9, #7590FF);
+
+      --bg-color: linear-gradient(135deg,
+      /* deep violet */         #5e289c 0%,
+      /* true purple */         #3D14B7 25%,
+      /* navy-blue mid-point */ #1414B7 50%,
+      /* royal blue */          #143DB7 75%,
+      /* deep sky blue */       #4c7cad 100%
+    );
       --text-color: #111111;
       --link-color: #0077cc;
       --hover-color: #005fa3;
     }
   
+    body.light-mode {
+      --bg-color: linear-gradient(135deg,
+      /* deep purple start */   #8E3CE9 0%,
+      /* slightly lighter */    #9C54E9 25%,
+      /* mid-purple */          #AD6CEE 50%,
+      /* periwinkle blue */     #7C8AF9 75%,
+      /* rich sky blue end */   #60A2F8 100% );
+      --text-color: #ffffff;
+      --link-color: #00d4ff;
+      --hover-color: #1e90ff;
+
+    }
+  
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Times New Roman', serif;
+      font-family: 'Cal Sans', sans-serif;
       background: var(--bg-color);
       color: #ffffff;
-      line-height: 1.6;
+      line-height: 1.3;
     }
     h1, h2, h3 {
-      color: #00d4ff;
+    /* Fill color */
+    color: #f2cb30;
+
+    /* WebKit stroke */
+    -webkit-text-stroke: 1px #645cbf;
+    /* ensure the fill still shows in WebKit */
+    -webkit-text-fill-color: #f2cb30;
+
+    /* Shadow fallback for non-WebKit browsers */
+    text-shadow:
+      1px  1px 0 #14d091,
+    -1px  1px 0 #000,
+      1px -1px 0 #000,
+    -1px -1px 0 #000;
     }
+
     a {
       color: #00d4ff;
       text-decoration: none;
       transition: color 0.3s ease;
     }
     a:hover {
-      color: #1e90ff;
+      color: #126ac3;
     }
     .container {
       max-width: 1200px;
@@ -71,6 +98,22 @@
       cursor: pointer;
       font-weight: bold;
       z-index: 1000;
+    }
+    /* WebKit stroke */
+    .webkit-stroke {
+      font-size: 3rem;
+      color: #F5F5F5;
+      -webkit-text-stroke: 1px #222;
+    }
+    /* text-shadow fallback */
+    .shadow-stroke {
+      font-size: 3rem;
+      color: #F5F5F5;
+      text-shadow:
+         1px  1px 0 #222,
+        -1px  1px 0 #222,
+         1px -1px 0 #222,
+        -1px -1px 0 #222;
     }
   </style>
 </head>
